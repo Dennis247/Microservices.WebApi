@@ -12,6 +12,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddMediatR(Assembly.GetExecutingAssembly());
+builder.Services.AddScoped<IApplicationContext, ApplicationContext>();
 
 builder.Services.AddDbContext<ApplicationContext>(options =>
                 options.UseSqlServer(
